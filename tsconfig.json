@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "es2015",
+    "moduleResolution": "Node",
+    "strict": true,
+    "lib": ["es2017", "dom"],
+    "types": []
+  },
+  "include": ["**/*.ts"]
+}

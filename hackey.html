@@ -7,33 +7,50 @@
   </head>
   <body>
     <div class="content">
-      <div id="phone" class="user">
-        <h2>Phone</h2>
-        <input type="text" id="sip-address" name="sip-address" disabled />
-        <button id="callBtn" disabled>Call</button>
-        <div class="video">
-          <video id="videoRemoteAlice" width="100%" muted="muted">
+      <div id="phone" class="">
+        <h2>
+          <span class="coolstatic" style="padding: 4px;" >H</span>
+          <span class="coolstatic">a</span>
+          <span class="coolstatic">c</span>
+          <span class="coolstatic">k</span>
+          <span class="coolstatic" style="padding: 4px;">e</span> 
+        </h2>
+
+        <select id="callIdList" class="selectCall">
+          <option class="" type="text" name="sip-address">bob@sipjs.onsip.com</option>
+          <option class="" type="text" name="sip-address">alice@sipjs.onsip.com</option>
+        </select>
+
+        <button class="" id="callBtn" disabled>Call</button>
+        <div class="video coolstatic">
+          <video class="" id="videoRemoteAlice" width="100%" muted="muted">
             <p>Your browser doesn't support HTML5 video.</p>
           </video>
-          <div class="video-local">
+          <div class="video-local coolstatic" style="position: absolute;">
             <video id="videoLocalAlice" width="100%" muted="muted">
               <p>Your browser doesn't support HTML5 video.</p>
             </video>
           </div>
         </div>
-          <button class="button-85" id="connectUser" disabled>Connect</button></li>
+        <div id="manualConnectRegister" style="display:none">
+          <button class="cooliano" id="connectUser" disabled>Connect</button></li>
           <button id="registerUser" disabled>Register User</button>
-          <button id="endAlice" disabled>End Video Session</button>
           <button id="unregisterAlice" disabled>Unregister</button>
           <button id="disconnectAlice" disabled>Disconnect</button>
-        <div>
-          <input type="checkbox" id="holdAlice" name="holdAlice" disabled />
-          <label for="holdAlice">Hold</label>
         </div>
-        <div>
-          <input type="checkbox" id="muteAlice" name="muteAlice" disabled />
-          <label for="muteAlice">Mute</label>
+
+        <div class="coolstatic myhor">
+          <button class="my-button coolstatic" id="hangupBtn" disabled>HangUp</button>
+          <div class="coolstatic" style="padding-top: 17px;margin-left: 5px; margin-right: 5px;">
+            <input type="checkbox" id="holdAlice" name="holdAlice" disabled />
+            <label for="holdAlice">Hold</label>
+          </div>
+          <div class="coolstatic" style="padding-top: 17px;margin-left: 5px; margin-right: 5px;">
+            <input type="checkbox" id="muteAlice" name="muteAlice" disabled />
+            <label for="muteAlice">Mute</label>
+          </div>
         </div>
+     
       </div>
 
       <div id="bob" class="user" hidden >

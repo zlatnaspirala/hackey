@@ -5,31 +5,24 @@
     // "ecmaVersion": "latest",
     "ecmaVersion": 2017,
     "sourceType": "module",
-    "project": "./tsconfig-base.json"
+    "project": "./tsconfig.json"
   },
   "plugins": [
       "@typescript-eslint",
-      "tree-shaking",
-      "prettier"
+      "tree-shaking"
   ],
   "extends": [
       "eslint:recommended",
       "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended",
-    // "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    // "plugin:@typescript-eslint/strict",
-      "prettier"
+      "plugin:@typescript-eslint/recommended"
   ],
+  "ignorePatterns": ["webpack.config.js", "**/vendor/*.js"],
   "rules": {
-    "no-console": "error",
-    "prettier/prettier": "error",
-    // "@typescript-eslint/explicit-member-accessibility": "error",
-    // "@typescript-eslint/member-ordering": "error",
     "tree-shaking/no-side-effects-in-initialization": "error"
   },
   "overrides": [
     {
-      "files": ["./demo/**/*.ts", "./test/**/*.ts"],
+      "files": ["./**/*.ts", "./test/**/*.ts"],
       "rules": {
         "@typescript-eslint/no-floating-promises": "off",
         "@typescript-eslint/no-implied-eval": "off",

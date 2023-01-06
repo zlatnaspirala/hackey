@@ -1,38 +1,19 @@
 {
   "name": "hackey-web",
-  "title": "SIP.js",
-  "description": "hackey-web is Based on SIP library for JavaScript [onsip]",
+  "title": "hackey-web sip web client",
+  "description": "hackey-web is Based on SIP library for JavaScript [onsip.com]",
   "version": "0.1.0",
   "license": "MIT",
-  "main": "./lib/index.js",
-  "files": [
-    "/lib"
-  ],
-  "module": "./lib/index.js",
+  "main": "./index.js",
   "sideEffects": false,
-  "type": "module",
-  "types": "./lib/index.d.ts",
   "homepage": "https://maximumroulette.com",
-  "author": "Nikola Lukic",
-  "contributors": [
-    {
-      "name": "Contributors",
-      "url": "https://github.com/onsip/SIP.js/blob/master/THANKS.md"
-    }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/"
+  "eslintIgnore": ["webpack.config.js"],
+  "scripts": {
+    "prebuild": "npm run lint",
+    "hackey": "webpack --progress --config webpack.config.js",
+    "lint": "eslint --ext .ts .",
+    "lint-fix": "eslint --ext .ts --fix ."
   },
-  "keywords": [
-    "onsip/SIP.js",
-    "sip",
-    "webrtc",
-    "library",
-    "websocket",
-    "javascript",
-    "typescript"
-  ],
   "devDependencies": {
     "@microsoft/api-documenter": "^7.19.22",
     "@microsoft/api-extractor": "7.7.11",
@@ -45,14 +26,6 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-tree-shaking": "^1.10.0",
     "jasmine-core": "^4.4.0",
-    "karma": "^6.4.1",
-    "karma-chrome-launcher": "^3.1.1",
-    "karma-cli": "^2.0.0",
-    "karma-jasmine": "^5.1.0",
-    "karma-jasmine-html-reporter": "^2.0.0",
-    "karma-mocha-reporter": "^2.2.5",
-    "karma-sourcemap-loader": "^0.3.8",
-    "karma-webpack": "^5.0.0",
     "mock-socket": "^9.1.5",
     "peggy": "^1.2.0",
     "prettier": "^2.7.1",
@@ -62,20 +35,32 @@
     "webpack": "^5.75.0",
     "webpack-cli": "^4.10.0"
   },
+  "dependencies": {
+    "sip.js": "^0.21.2"
+  },
   "engines": {
     "node": ">=10.0"
   },
-  "scripts": {
-    "prebuild": "npm run lint",
-    "build-demo": "webpack --progress --config webpack.config.cjs",
-    "build-lib": "tsc -p src",
-    "build-test": "tsc -p test",
-    "build-and-test": "npm run build && npm run test",
-    "build-and-test-browser": "npm run build && npm run test-browser",
-    "lint": "eslint --ext .ts .",
-    "lint-fix": "eslint --ext .ts --fix ."
+  "author": "Nikola Lukic",
+  "contributors": [
+    {
+      "name": "Contributors",
+      "url": "https://github.com/onsip/SIP.js/blob/master/THANKS.md"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zlatnaspirala/hackey"
   },
-  "dependencies": {
-    "sip.js": "^0.21.2"
-  }
+  "keywords": [
+    "webpack",
+    "sip-web-client",
+    "onsip/SIP.js",
+    "sip",
+    "webrtc",
+    "library",
+    "websocket",
+    "javascript",
+    "typescript"
+  ]
 }

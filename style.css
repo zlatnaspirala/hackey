@@ -15,7 +15,8 @@ body {
 }
 
 #phone {
-  width: 1024px;
+  width: 95%;
+  height: 100%;
 }
 
 .myhor {
@@ -57,12 +58,13 @@ button {
   width: 100%;
 }
 
+
 .video {
   display: flex;
   background: black;
   position: relative;
   border: 1px solid lightgrey;
-  height: 75%;
+  height: 70%;
   margin: 10px 0;
 }
 
@@ -78,6 +80,29 @@ button {
   transform: scaleX(-1);
 }
 
+
+@media only screen and (max-height: 755px),
+            screen and (max-width: 755px) {
+
+  body {
+    font-size: small;
+  }
+
+  .video-local {
+    width: 96px;
+    height: 96px;
+  }
+
+  .video {
+    display: flex;
+    background: black;
+    position: relative;
+    border: 1px solid lightgrey;
+    height: 55%;
+    margin: 10px 0;
+  }
+
+}
 
 /* CSS */
 .cooliano {
@@ -223,7 +248,7 @@ button.my-button{
   -webkit-filter: blur(5px);
   width: calc(100% + 4px);
   height: calc(100% + 4px);
-  animation: glowing-coolstatic 30s linear infinite;
+  animation: glowing-coolstatic 60s linear infinite;
   transition: opacity 1.3s ease-in-out;
   border-radius: 1px;
 }

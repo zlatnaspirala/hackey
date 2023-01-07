@@ -19,14 +19,18 @@ function randomString(length: number, chars: string): string {
 // the number of users we register for the SIP domain, because SIP hosts
 // generally have limits on the number of registered users you may have in total
 // or over a period of time.
-let token = getCookie("onsipToken");
-if (token === "") {
-  token = randomString(32, ["0123456789", "abcdefghijklmnopqrstuvwxyz", "ABCDEFGHIJKLMNOPQRSTUVWXYZ"].join(""));
-  const d = new Date();
-  d.setTime(d.getTime() + 1000 * 60 * 60 * 24); // expires in 1 day
-  document.cookie = "onsipToken=" + token + ";" + "expires=" + d.toUTCString() + ";";
-}
+ export function genToken() {
+    let token = getCookie("onsipToken");
+    if (token === "") {
+      token = randomString(32, ["0123456789", "abcdefghijklmnopqrstuvwxyz", "ABCDEFGHIJKLMNOPQRSTUVWXYZ"].join(""));
+      const d = new Date();
+      d.setTime(d.getTime() + 1000 * 60 * 60 * 24); // expires in 1 day
+      document.cookie = "onsipToken=" + token + ";" + "expires=" + d.toUTCString() + ";";
+    }
+    return token;
+  }
 
+  const token = genToken();
 // The demos uses unauthenticated users on the "sipjs.onsip.com" demo domain.
 // The demos uses OnSIP's WebSocket Server which hosts the "sipjs.onsip.com" demo domain.
 const domain = "sipjs.onsip.com";

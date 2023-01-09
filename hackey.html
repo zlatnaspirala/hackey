@@ -17,12 +17,17 @@
         </h2>
 
         <div style="display: flex;">
-          <div class="coolstatic" >Add contact</div>
+          <div class="coolstatic" id="changeUsername">Change username</div>
+          <input class="coolstatic" type="text" id="me" name="me" placeholder="nidza@sip.linphone.org" />
+        </div>
+
+        <div style="display: flex;">
+          <div class="coolstatic" id="addContactBtn">Add contact</div>
           <input class="coolstatic" type="text" id="newContact" name="newContact" placeholder="nidza@sip.linphone.org" />
         </div>
 
         <select id="callIdList" class="selectCall">
-          <option class="" type="text" name="sip-address">bob@sipjs.onsip.com</option>
+          <option class="" type="text" name="sip-address">zlatnaspirala@sipjs.onsip.com</option>
           <option class="" type="text" name="sip-address">alice@sipjs.onsip.com</option>
         </select>
 
@@ -40,8 +45,8 @@
         <div id="manualConnectRegister" style="display:none">
           <button class="cooliano" id="connectUser" disabled>Connect</button></li>
           <button id="registerUser" disabled>Register User</button>
-          <button id="unregisterAlice" disabled>Unregister</button>
-          <button id="disconnectAlice" disabled>Disconnect</button>
+          <button id="unregister" disabled>Unregister</button>
+          <button id="disconnect" disabled>Disconnect</button>
         </div>
 
         <div class="coolstatic myhor">

@@ -16,3 +16,21 @@ npm i
 ```
 npm run hackey
 ```
+
+
+
+
+### Test SIP servers
+
+#### KAMAILIO
+
+Instalation:
+
+ - http://www.kamailio.org/wiki/tutorials/getting-started/main
+ or 
+ - https://www.kamailio.org/wiki/packages/rpms
+
+Run:
+
+
+

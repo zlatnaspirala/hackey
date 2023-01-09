@@ -30,11 +30,8 @@ function randomString(length: number, chars: string): string {
     return token;
   }
 
-  const token = genToken();
-// The demos uses unauthenticated users on the "sipjs.onsip.com" demo domain.
-// The demos uses OnSIP's WebSocket Server which hosts the "sipjs.onsip.com" demo domain.
+const token = genToken();
 const domain = "sipjs.onsip.com";
 
 export const nameAlice = "Alice";
 export const uriAlice = "sip:alice." + token + "@" + domain;
-export const webSocketServerAlice = "wss://edge.sip.onsip.com";

@@ -1,5 +1,5 @@
 import { Web } from "sip.js";
-import { getButton, getE, getVideo } from "./scripts/demo-utils";
+import { getButton, getE, getVideo } from "./scripts/utils";
 
 const domain = "sipjs.onsip.com";
 export const webSocketServerAdd = "wss://edge.sip.onsip.com";

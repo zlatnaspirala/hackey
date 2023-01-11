@@ -8,8 +8,8 @@ import { getButton, getE, getVideo, LocalStorageMemory } from "./scripts/utils";
 
 export class Hackey {
 
-  domain="sipjs.onsip.com";
-  webSocketServer="wss://edge.sip.onsip.com";
+  domain="159.89.8.40";
+  webSocketServer="wss://159.89.8.40:5060";
   iamUser="alice";
   getE = getE;
   // eslint-disable-next-line @typescript-eslint/no-empty-function
